@@ -1,0 +1,578 @@
+/* 共通のスタイル */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  margin-right: 70px;
+}
+
+#sidebar-toggle {
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Main Content */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.schedule-button {
+  width: 120px;
+  height: 120px;
+  background-color: #4e82b8;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* 追加: ホバー時のアニメーション効果 */
+}
+
+.schedule-button:hover {
+  background-color: #306090; /* 追加: ホバー時の背景色 */
+}
+
+.schedule-date {
+  font-size: 18px;
+  margin-top: 5px;
+  color: #fff;
+}
+
+h3 time{
+  font-family: 'Monda' , sans-serif;
+  font-size: 300%;
+}
+
+h3 {
+  font-size: 100%;
+  font-weight: normal;
+  margin-top: 20px;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+h3 header {
+  flex-grow: 1;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+
+.movie-info h2 {
+  margin-right: 20px;
+  font-size: 24px;
+}
+
+.movie-info h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1px;
+}
+
+.movie-info .info-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4e82b8;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 16px; /* 追加: ボタンのフォントサイズ */
+}
+
+.movie-info .info-button:hover {
+  background-color: #306090;
+}
+
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* Screen Table */
+.screen-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.screen-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.screen-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.screen {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.screen:hover {
+  background-color: #ddd;
+}
+
+.screen-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.screen-info {
+  color: #666;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+.cinema-image {
+  display: block;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.gyoukan {
+  font-size: 16px;
+  line-height: 30px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  color: #555;
+}
+
+.image-text-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.image-text-container img {
+  width: 300px;
+  margin-right: 20px;
+}
+
+.image-text-container .text {
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.address {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+    /* 追加されたCSS */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100vh;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .sidebar a {
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+.content {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.m{
+  margin: 0 500px 0 auto;
+  font-size: 20px;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li a{
+  display: block;
+  color: #333;
+}
+
+.timetable {
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+ul.timetable {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul.timetable li {
+  float: left;
+  width: 140px;
+  padding: 5px;
+  color: #999;
+  background: #f6f6f6;
+  overflow: hidden;
+  text-align: right;
+  border-left: 4px solid #FFF;
+  border-top: 4px solid #FFF;
+}
+
+a{
+  text-decoration: none;
+}
+ul.timetable li:last-child {
+  border-right: 4px solid #FFF;
+}
+ul.timetable li:nth-child(7) {
+  margin-left: 150px;/* timetable2 廃止 */
+}
+
+ul.timetable li.theatre {
+  border: none;
+  border-left: none;
+  color: #666;
+  text-align: center;
+  background: #fff;/* SP対応 */
+}
+ul.timetable li.theatre-num {
+  font-size: 220%;
+}
+ul.timetable li.long-name {
+  /*font-size: 185%;
+  line-height: 1;*/
+  font-size: 100%;
+  line-height: 3;
+}
+ul.timetable li small {
+  font-size: 80%;
+  color: #999;
+}
+
+ul.timetable li .theatre-num,
+ul.timetable li time {
+  font-family: 'Monda', sans-serif;
+}
+ul.timetable li time.start {
+  font-size: 220%;
+  text-align: left;
+  display: block;
+}
+
+@media only print {
+ul.timetable li .theatre-num {
+  font-size: 100%;
+}
+ul.timetable li time.start {
+  font-size: 100%;
+}
+}
+
+ul.timetable li a {
+  display: block;
+  color: #333;
+}
+
+/* .timetable li a:hover span,
+.timetable2 li a:hover span, */
+ul.timetable li a:hover {
+  /* background-color: #EEE; */
+  color: #4DA7D8;
+}
+
+ul.timetable li a:hover .available,
+ul.timetable li a:hover .remaining {
+  /* background-color: #F96; */
+  opacity: 0.8;
+}
+
+
+.close,
+.soldout,
+.remaining,
+.available,
+.others {
+  color: #FFF;
+  padding: 5px;
+  text-align: center;
+}
+.others {
+  padding: 5px 0;
+}
+
+.close,
+.soldout,
+.others {
+  background: #999;
+}
+.remaining{
+  background: #3eb370;
+}
+.available {
+  background: #4DA7D8;
+}
+
+.close:before,
+.soldout:before,
+.remaining:before,
+.available:before {
+  display: block;
+  float: left;
+  background: #FFF;
+  padding: 2px 2px 2px 2px;
+  font-weight: bold;
+  width: 15px;
+  height: 15px;
+  font-size: 17px;
+}
+.close:before {
+  content: "─";
+  color: #333;
+}
+.soldout:before {
+  content: "×";
+  color: #333;
+}
+.remaining:before {
+  content: "△";
+  color: #F96;
+}
+.available:before {
+  content: "◯";
+  color: #4DA7D8;
+}
+
+#update {
+  text-align: right;
+}
+
+/* clearfix */
+
+#timetable article:after,
+#timetable header:after,
+#timetable ul:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 480px) {
+  
+  #timetable,
+  ul {
+    width: 100%;
+  }
+  #printout,
+  header .site,
+  header p {
+    display: none;
+  }
+  header h2 {
+    font-size: 1rem;
+  }
+  article .info {
+    font-size: 0.8rem;
+    padding: 0 10px;
+  }
+  h1 {
+    margin: 0;
+  }
+  h1 time {
+    font-size: 1.3rem;
+  }
+  h1 a {
+    display: block;
+  }
+  #select-movies {
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+  
+  ul {
+    padding: 0 2px;
+    background: #fff;
+    margin-bottom: 0;
+  }
+  ul.timetable li {
+    font-size: 0.5rem;
+    width: 25%;
+    border: 2px solid #FFF;
+  }
+  ul.timetable li .long-name {
+    /*font-size: 1rem;*/
+  }
+  ul.timetable li.theatre {
+    background: #fff;
+  }
+  ul.timetable li:nth-child(5) {
+    margin-left: 25%;/* timetable2 廃止 */
+  }
+  ul.timetable li:nth-child(7) {
+    margin-left: 0;/* timetable2 廃止 */
+  }
+  ul.timetable li:last-child {
+    border: 2px solid #FFF;
+  }
+  ul.timetable li time.start {
+    font-size: 1.2rem;
+    
+  }
+  .close:before,
+  .soldout:before,
+  .remaining:before,
+  .available:before {
+    width: 15px;
+    height: 15px;
+    font-size: 0.6rem;
+    padding: 0;
+  }
+  #update {
+    text-align: left;
+    font-size: 0.8rem;
+    padding: 0 10px;
+  }
+  
+  /* MAINTENANCE */
+  #maintenance h1 {
+    font-size: 1.4rem;
+    margin-right: 0;
+  }
+  #maintenance p {
+    overflow: auto;
+    clear: both;
+  }
+
+}
+
+
+
+
+/* サイドメニューのスタイル */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  transition: left 0.3s ease;
+}
+
+.show-sidebar {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+

@@ -1,0 +1,11 @@
+ALTER TABLE t_screen1 ADD (B1 int(11),B2 int(11),B3 int(11),B4 int(11),B5 int(11),B6 int(11),B7 int(11),B8 int(11),B9 int(11),B10 int(11),B11 int(11),
+                          B12 int(11),B13 int(11),B14 int(11),B15 int(11),B16 int(11),B17 int(11),B18 int(11),B19 int(11),B20 int(11),C1 int(11),C2 int(11),
+                          C3 int(11),C4 int(11),C5 int(11),C6 int(11),C7 int(11),C8 int(11),C9 int(11),C10 int(11),C11 int(11),C12 int(11),C13 int(11),
+                          C14 int(11),C15 int(11),C16 int(11),C17 int(11),C18 int(11),C19 int(11),C20 int(11),D1 int(11),D2 int(11),D3 int(11),D4 int(11),
+                          D5 int(11),D6 int(11),D7 int(11),D8 int(11),D9 int(11),D10 int(11),D11 int(11),D12 int(11),D13 int(11),D14 int(11),D15 int(11),
+                          D16 int(11),D17 int(11),D18 int(11),D19 int(11),D20 int(11),E1 int(11),E2 int(11),E3 int(11),E4 int(11),E5 int(11),E6 int(11),E7 int(11),E8 int(11),E9 int(11),E10 int(11),E11 int(11),E12 int(11),E13 int(11),E14 int(11),E15 int(11),E16 int(11),E17 int(11),E18 int(11),E19 int(11),E20 int(11));
+
+
+
+
+ALTER TABLE t_screen1 ADD (A1 int(11),A2 int(11),A3 int(11),A4 int(11),A5 int(11),A6 int(11),A7 int(11),A8 int(11)A9 int(11),A10 int(11),A11 int(11),A12 int(11),A13 int(11),A14 int(11),A15 int(11),A16 int(11),A17 int(11),A18 int(11),A19 int(11),A20 int(11));

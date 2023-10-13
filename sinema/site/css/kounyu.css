@@ -1,0 +1,748 @@
+/* 共通のスタイル */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  margin-right: 70px;
+}
+
+#sidebar-toggle {
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Main Content */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h3 time{
+  font-family: 'Monda' , sans-serif;
+  font-size: 300%;
+}
+
+h3{
+  font-size: 100%;
+  font-weight: normal;
+  margin-top: 20px;
+  color: #555;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* Screen Table */
+.screen-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.screen-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.screen-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.screen {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.screen:hover {
+  background-color: #ddd;
+}
+
+.screen-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.screen-info {
+  color: #666;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+.cinema-image {
+  display: block;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.gyoukan {
+  font-size: 16px;
+  line-height: 30px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  color: #555;
+}
+
+.image-text-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.image-text-container img {
+  width: 300px;
+  margin-right: 20px;
+}
+
+.image-text-container .text {
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.address {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100vh;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .sidebar a {
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+.content {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.m{
+  margin: 0 500px 0 auto;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 003：座席予約内容 座席購入内容 
+=============================================================================== */
+
+.ticketInfo {
+  clear:both;
+  background-repeat:no-repeat;
+  background-position:bottom;
+  padding-bottom:20px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:10px;
+  margin-bottom:10px;
+  background-color:#F6F6F6;
+}
+
+.ticketInfoBody {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+
+
+.ticketInfo table{
+}
+
+    .tiketInfoBody div:first-child {
+  margin: 0 5px;
+  padding: 3px 5px 3px 5px;
+/*  background:#8c8c8c;*/
+background-color: #555555;
+  background:#555555;
+  color:#FFFFFF;
+/*  border-radius:3px;*/
+  width:75px;
+  font-weight:bold;
+  font-size:14px;
+  text-align:center;
+  margin-bottom: 10px;
+    }
+
+.tiketInfoBody {
+  background-color: #e6e6e6;
+}
+
+.ticketInfo td {
+/*  color:#000000;*/
+  color:#555555;
+  font-size:14px;
+  padding:2px 5px 2px 5px;
+  vertical-align:middle;
+}
+.ticketInfo .qrBox {
+  padding:8px 0px;
+  vertical-align:middle;
+}
+
+    .seat {
+      display: inline-block;
+      width: 20px;
+      height: 30px;
+      margin: 2px;
+      text-align: center;
+      line-height: 30px;
+      background-color: #ccc;
+      text-decoration: none;
+      color: #000;
+      border-radius: 5px;
+    }
+
+.seat-list{
+  text-align: center;
+  list-style: none;
+}
+
+.scrn{
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse; /* ボタンの順序を逆にする */
+}
+
+.btn {
+  /* 既存のスタイル */
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  margin: 0 10px;
+}
+
+.btn-next {
+  /* 既存のスタイル */
+  background-color: #2196f3;
+}
+
+.btn-back {
+  /* 既存のスタイル */
+  background-color: #f44336;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 003：券種選択テーブル関連
+=============================================================================== */
+
+#tkList {
+  margin:0;
+  padding:0;
+}
+/*  入力テーブル  */
+#tkList #tickettbl{
+/*  width:100%;*/
+  min-height:39px;
+  margin-bottom:20px;
+/*  width:450px;*/
+  width:440px;
+  display:inline-block;
+}
+
+/*  クーポン入力テーブル  */
+#tkList #coupontbl{
+  min-height:39px;
+  margin-bottom:20px;
+  width:450px;
+  display:inline-block;
+}
+
+/*  確認テーブル  */
+#tkList #tickettblcnf{
+  width:600px;
+/*  width:300px;*/
+  min-height:39px;
+  margin-bottom:20px;
+}
+
+#tkList #tickettbl th,
+#tkList #tickettblcnf th,
+#tkList #coupontbl th{
+  padding:10px;
+  color:#FFFFFF;
+  background-color:#999999;
+  text-align:center;
+  border:solid 1px #FFFFFF;
+  vertical-align:middle;
+}
+
+#tkList #tickettbl td,
+#tkList #tickettblcnf td,
+#tkList #coupontbl td{
+  text-align:center;
+  color:#333333;
+  background-color:#F6F6F6;
+  border:solid 1px #FFFFFF;
+  padding:3px;
+}
+
+#tickettbl > tbody > tr,
+#coupontbl > tbody > tr{
+  height: 30px;
+}
+
+#tickettbl > tbody > tr.addPrice,
+#coupontbl > tbody > tr.addPrice{
+  height: 90px;
+}
+
+#tkList #tickettblcnf .alignleft{
+  text-align:left;
+}
+
+#tkList .col01{
+  width:10px;
+}
+#tkList .col02{
+  width:65px;
+}
+#tkList .col03{
+  width:220px;
+}
+#tkList .col04{
+  width:150px;
+}
+#tkList .col05{
+  width:140px;
+}
+#tkList .col06{
+  width:60px;
+}
+#tkList .col07{
+  width:60px;
+}
+
+#tkList #coupontbl .inputcol{
+  width:450px;
+}
+
+#tkList #coupontbl tr:nth-child(n + 1) > td {
+  text-align: left;
+  vertical-align: middle;
+}
+
+#tkList #coupontbl input.code {
+  width: 80px;
+}
+
+#tkList #coupontbl input.pass {
+  width: 70px;
+}
+
+#tkList #coupontbl input.auth,
+#tkList #coupontbl input.clear {
+  width: 50px;
+}
+
+#tkList table#coupontbl.hidden-area {
+  display: none;
+}
+
+.ticketBtn.couponBtn {
+  width: 298px;
+  height: 28px;
+  border: 1px solid #999999;
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+
+.ticketBtn.couponBtn:hover {
+  opacity: 0.6;
+}
+
+.ticketBtn.couponBtn span {
+  width: inherit;
+  height: inherit;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  color: #7c7c7c;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+#tkList #coupontbl.hidden-area {
+  display: none;
+}
+
+/* エラー文 */
+#errorPut{
+  clear:both;
+  padding:5px 0;
+  color:#c30;
+  font-weight:bold;
+  text-align:right
+}
+
+/* 注意文 */
+#tkNotice {
+  clear:both;
+  padding-top:15px
+}
+#tkNotice p {
+  clear:both;
+  padding:5px 0;
+}
+
+
+
+/* 座席エリア設定 */
+/*
+.screenClass{
+}
+
+#sitescr_2, #sitescr_3, #sitescr_4, #sitescr_1 img, #sitescr_1 #screen{
+  position:absolute;
+}
+
+#sitescr_2{
+  top:0px;
+  left:8px;
+  background: #000000;
+}
+
+#sitescr_3{
+  top:2px;
+  left:8px;
+  background-image:url(/pc/img/ticket/back_sitescr01.gif);
+  background-repeat:repeat-x;
+  color:#FFFFFF;
+  text-align:center
+}
+
+#sitescr_4{
+  top:17px;
+  left:8px;
+  background: #000000;
+}
+
+#sitescr_1 img{
+  top:20px;
+  left:12px;
+}
+
+#sitescr_1 #screen{
+  background-image: url(../img/space.gif);
+  top:20px;
+  left:12px;
+}
+*/
+
+/* 座席選択 */
+/*
+#responceSeat {
+  padding:0px
+}
+#responceSeat p {
+  padding:3px 0 3px 4px;
+  border-left:4px solid #c30;
+  font-size:116%;
+  font-weight:bold;
+}
+#responceSeat ul {
+  margin:0px;
+  padding-bottom:10px
+}
+#responceSeat li {
+  margin:5px 0 0;
+  padding:0 0 0 5px;
+  border-left:10px solid #1B3;
+}
+#responceSeat li#seat001 {  border-color:#1b3;}
+#responceSeat li#seat002 {  border-color:#e23;}
+#responceSeat li#seat003 {  border-color:#eb3;}
+*/
+
+/* アラートエリア*/
+
+.noticeBox {
+  width:747px;
+  margin-top:6px;
+  margin-bottom:3px;
+/*  margin-left:auto;*/
+/*  margin-right:auto;*/
+/*  background-color:#ff8a00;*/
+}
+.noticeBox p {
+  padding:11px 0px;
+}
+.noticeBox p em {
+  color:#FD8B60;
+  font-size:120%;
+  font-weight:bold;
+}
+
+
+
+
+/* SSL マーク群*/
+
+#sslmarks {
+  margin:25px 0 0;
+}
+#sslmarks div {
+  float:left;
+  margin:0 15px 0 0;
+}
+#sslmarks p {
+  font-size:83%;
+}
+
+#clearCart {
+  width: 361px;
+  display: inline;
+}
+
+
+/* kounyu.css */
+
+.seat.selected {
+  background-color: red; /* クリック時の背景色 */
+  color: white; /* クリック時のテキスト色 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* サイドメニューのスタイル */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  transition: left 0.3s ease;
+}
+
+.show-sidebar {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ここから */
+
+
+.example2 {
+  display: flex;
+}
+
+.example2 p {
+  font-size: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.example2 label {
+  display: block;
+  width: 20px;
+  height: 30px;
+  background: #A0D8EF;
+  color: #000;
+  padding: 0px;
+  margin: 0 3px 0 3px;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 15%;
+}
+
+.example2 input:checked+label {
+  background: #E45E32;
+  color: #FFF;
+}
+
+.example2 input {
+  display: none;
+}
+
+
+.aokikuso {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.aoki{
+  font-size: 20px;
+}

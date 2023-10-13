@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>試し</title>
+  </head>
+
+  <body>
+ 
+    <h1 id="idName">クリック前</h1>
+    <input type="button" value="Click" onclick="myfunc()">
+ 
+    <script>
+      var myfunc = function(){
+ 
+        var myh1 = document.getElementById("idName");
+        myh1.innerHTML = "クリック後";
+ 
+ 
+      }
+    </script>
+ 
+  </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ボタンをクリックして切り替える</title>
+  <script>
+    function toggleContent() {
+      var content1 = document.getElementById("content1");
+      var content2 = document.getElementById("content2");
+
+      // content1を表示、content2を非表示にする
+      if (content1.style.display === "none") {
+        content1.style.display = "block";
+        content2.style.display = "none";
+      } else {
+        // content2を表示、content1を非表示にする
+        content1.style.display = "none";
+        content2.style.display = "block";
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="toggleContent()">切り替え</button>
+
+  <div id="content1" style="display: block;">
+    <h2>コンテンツ1</h2>
+    <p>これはコンテンツ1の内容です。</p>
+  </div>
+
+  <div id="content2" style="display: none;">
+    <h2>コンテンツ2</h2>
+    <p>これはコンテンツ2の内容です。</p>
+  </div>
+</body>
+</html>
