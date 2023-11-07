@@ -1,7 +1,7 @@
 <?php
  try {
   //pdoを読み込む
-  require('dbpdo.php');
+  require('db/dbpdo.php');
  
   $name = $_POST['name'];
   $pass = $_POST['pass'];
@@ -35,8 +35,8 @@
       } else {
         session_start();
         $_SESSION['name'] = $name;
-            // ログイン成功後eiga.phpに飛ばす
-            header('Location: eiga.php');
+            // ログイン成功後index.phpに飛ばす
+            header('Location: index.php');
       }
 
   }
