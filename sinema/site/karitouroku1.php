@@ -1,4 +1,5 @@
 <?php
+//kari
 require('db/dbpdo.php');
 session_start();
 $name = $_SESSION['name'] ;
