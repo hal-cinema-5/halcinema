@@ -746,3 +746,17 @@ background-color: #555555;
 .aoki{
   font-size: 20px;
 }
+label#ng{
+  display: block;
+  width: 20px;
+  height: 30px;
+  background: #8c9092;
+  color: #000;
+  padding: 0px;
+  margin: 0 3px 0 3px;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 15%;
+}
