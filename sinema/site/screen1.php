@@ -1,3 +1,169 @@
+<?php
+session_start();
+
+
+if($_SESSION['movieID']){
+  $movie_name = $_SESSION['movieID'];
+  $movie_time = $_SESSION['movietime'];
+  $movie_day = $_SESSION['movieday'];
+} else {
+  $movie_name = $_GET['movieID'];
+  $movie_time = $_GET['movietime'];
+  $movie_day = $_GET['movieday'];
+}
+
+$_SESSION['movieID'] = $movie_name;
+$_SESSION['movietime'] = $movie_time;
+$_SESSION['movieday'] = $movie_day;
+
+
+
+
+print($movie_name);
+print($movie_time);
+print($movie_day);
+$given = date('Y-m-d');
+// $_SESSION['movieID'] = $movie_id;
+
+
+
+//1日目表示
+//配列を使用し、要素順に(日:0〜土:6)を設定する
+$week = [
+  '(日)', //0
+  '(月)', //1
+  '(火)', //2
+  '(水)', //3
+  '(木)', //4
+  '(金)', //5 
+  '(土)', //6
+];
+$date = date('w');
+//日本語で曜日を出力
+$week1 = $week[$date];
+echo date("Y/m/d". $week1 ."") . "\n";
+
+
+//2日目表示
+//配列を使用し、要素順に(日:0〜土:6)を設定する
+$week = [
+  '(日)', //0
+  '(月)', //1
+  '(火)', //2
+  '(水)', //3
+  '(木)', //4
+  '(金)', //5 
+  '(土)', //6
+];
+$date = date('w');
+if($date <= 5){
+$date = $date + 1;
+} else {
+  $date = 0;
+} 
+//日本語で曜日を出力
+$week2 = $week[$date];
+$Day2 = strtotime($given . ' +1 day');
+echo date("m/d". $week2 ."", $Day2) . "\n";
+
+
+
+//3日目表示
+//配列を使用し、要素順に(日:0〜土:6)を設定する
+$week = [
+  '(日)', //0
+  '(月)', //1
+  '(火)', //2
+  '(水)', //3
+  '(木)', //4
+  '(金)', //5 
+  '(土)', //6
+];
+$date = date('w');
+if($date <= 4){
+$date = $date + 2;
+}else
+if($date == 5){
+  $date = 0;
+}else
+if($date == 6){
+  $date = 1;
+}
+//日本語で曜日を出力
+$week3 = $week[$date];
+$Day3 = strtotime($given . ' +2 day');
+echo date("m/d". $week3 ."", $Day3) . "\n";
+
+
+
+//4日目表示
+//配列を使用し、要素順に(日:0〜土:6)を設定する
+$week = [
+  '(日)', //0
+  '(月)', //1
+  '(火)', //2
+  '(水)', //3
+  '(木)', //4
+  '(金)', //5 
+  '(土)', //6
+];
+$date = date('w');
+if($date <= 3){
+  $date = $date + 3;
+  }else
+  if($date == 4){
+    $date = 0;
+  }else
+  if($date == 5){
+    $date = 1;
+  }else
+  if($date == 6){
+    $date = 2;
+  }
+//日本語で曜日を出力
+$week4 = $week[$date];
+$Day4 = strtotime($given . ' +3 day');
+echo date("m/d". $week4 ."", $Day4) . "\n";
+
+
+
+//5日目表示
+//配列を使用し、要素順に(日:0〜土:6)を設定する
+$week = [
+  '(日)', //0
+  '(月)', //1
+  '(火)', //2
+  '(水)', //3
+  '(木)', //4
+  '(金)', //5 
+  '(土)', //6
+];
+$date = date('w');
+if($date <= 2){
+  $date = $date + 4;
+  }else
+  if($date == 3){
+    $date = 0;
+  }else
+  if($date == 4){
+    $date = 1;
+  }else
+  if($date == 5){
+    $date = 2;
+  }else
+  if($date == 6){
+    $date = 3;
+  }
+//日本語で曜日を出力
+$week5 = $week[$date];
+$Day5 = strtotime($given . ' +4 day');
+echo date("m/d". $week5 ."", $Day5) . "\n";
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -39,7 +205,7 @@
               <th>
                 <div>作品名</div>
               </th>
-              <td>ザ・スーパーマリオブラザーズ・ムービー</td>
+              <td><?php echo "$movie_name" ?></td>
             </tr>
             <tr>
               <th>
@@ -57,20 +223,48 @@
               <th>
                 <div>鑑賞日</div>
               </th>
-              <td>2023年06月13日(日)</td>
+              <td>
+                <?php if($movie_day == 1){
+                          echo date("Y/m/d". $week1 ."") . "\n"; 
+                          $f_time_day = date("m-d");
+                        } else if($movie_day == 2){
+                          echo date("m/d". $week2 ."", $Day2) . "\n";
+                          $f_time_day = date("m-d", $Day2);
+                          } else if($movie_day == 3){
+                            echo date("m/d". $week3 ."", $Day3) . "\n";
+                            $f_time_day = date("m-d", $Day3);
+                            } else if($movie_day == 4){
+                              echo date("m/d". $week4 ."", $Day4) . "\n";
+                              $f_time_day = date("m-d", $Day4);
+                              } else if($movie_day == 5){
+                                echo date("m/d". $week5 ."", $Day5) . "\n";
+                                $f_time_day = date("m-d", $Day5);
+                                }
+                ?>
+              </td>
             </tr>
             <tr>
               <th>
                 <div>時間</div>
               </th>
-              <td>13時00分　-　15時00分</td>
+              <td><?php 
+                  if($movie_time == "10:00"){
+                    echo "10時00分-12時00分";
+                  } else if($movie_time == "13:00"){
+                      echo "13時00分-15時00分";
+                    } else if($movie_time == "16:00"){
+                        echo "16時00分-19時00分";
+                      }else if($movie_time == "19:00"){
+                          echo "19時00分-21時00分";
+                        }
+              ?></td>
             </tr>
-            <tr>
+            <!-- <tr>
               <th>
                 <div>枚数</div>
               </th>
               <td></td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
       </div>
@@ -85,10 +279,11 @@
 
               <?php
                 require('db/dbpdo.php');
-                $sql = ("select * from t_screen1 "); //SQL文
+                $sql = ("select * from t_screen1 where f_movie_name = '". $movie_name ."' and f_time_day = '". $f_time_day ."' and f_time_start = '". $movie_time ."'"); //SQL文
                 $res = $dbh->prepare($sql);
                 $res->execute();
                 $data = $res->fetchAll();
+                // print_r($data);
 
                 if($data[0][2] == 0){ ?>
                   <input type="checkbox" id="A1" value="A1" name="seki[]"><label for="A1"><p> 1 </p></label>
@@ -1863,7 +2058,7 @@
         <br>
       <div class="button-container">
       <button type="submit">確認画面へ</button>
-        <a href="jouei.html" class="btn btn-back">戻る</a>
+        <a href="jouei.php" class="btn btn-back">戻る</a>
       </div>
 
     </div>

@@ -19,10 +19,10 @@ print("ユーザー:".$name);
 <body>
   <div class="sidebar">
     <ul>
-      <li><a href="index.html">トップページ</a></li>
-      <li><a href="jouei.html">上映スケジュール</a></li>
-      <li><a href="sisetu.html">施設情報</a></li>
-      <li><a href="ryoukin.html">料金一覧</a></li>
+      <li><a href="index.php">トップページ</a></li>
+      <li><a href="jouei.php">上映スケジュール</a></li>
+      <li><a href="sisetu.php">施設情報</a></li>
+      <li><a href="ryoukin.php">料金一覧</a></li>
       <li><a href="login.php">ログイン</a></li>
       <li><a href="user.php">ユーザーページ</a></li>
     </ul>
@@ -37,13 +37,13 @@ print("ユーザー:".$name);
 
     <div class="container">
    <ul class="slider">
-    <a href="jouhou.html" class="topjo">
+    <a href="jouhou.php" class="topjo">
     <li class="slider-item"><img src="images/makko.jpg" class="topga" alt="Slide 1"></li>
     </a>
-    <a href="jouhou.html" class="topjo">
+    <a href="jouhou.php" class="topjo">
     <li class="slider-item"><img src="images/konan.jpg" class="topga" alt="Slide 2"></li>
   </a>
-  <a href="jouhou.html" class="topjo">
+  <a href="jouhou.php" class="topjo">
     <li class="slider-item"><img src="images/jinmengyo.jpg" class="topga" alt="Slide 3"></li>
   </a>
   </ul>
