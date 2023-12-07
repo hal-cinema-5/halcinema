@@ -201,8 +201,6 @@ $Day_sql5 = date("m-d", $Day5);
   <link rel="stylesheet" href="css/jouei.css">
 </head>
 
-
-
 <div id="content1" style="display: block;">
 <body>
   <div class="sidebar">
@@ -268,7 +266,7 @@ $Day_sql5 = date("m-d", $Day5);
   $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
   ?>
 <h3>
-  <time><?php echo date("Y/m/d". $week1 ."") . "\n"; ?></time>
+  <time><?php echo date("Y年m月d日". $week1 ."") . "\n"; ?></time>
 </h3>
 
 <?php foreach ($result as $item): ?>
@@ -281,17 +279,12 @@ $Day_sql5 = date("m-d", $Day5);
     $movie_name1 = $movie_name[0][1];
     // print_r($movie_name);
 
-
-
-
-
     ?>
   <?php if($movie_name1 == $item['f_movie_name']) { ?>
     <div class="movie-info">
-        <h4>　<?php echo $item['f_movie_name']; ?>
-          <a href="jouhou.php" class="info-button">映画情報へ</a>　　
-        </h4>
-          </div>
+      <h4><?php echo $item['f_movie_name']; ?></h4>
+      <a href="jouhou.php" class="info-button">映画情報へ</a>
+    </div>
         <ul class="timetable">
           <div>
             <li class="theatre" >
@@ -1287,7 +1280,7 @@ $stmt->execute();
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <h3>
-<time><?php echo date("Y/m/d". $week2 ."", $Day2) . "\n"; ?></time>
+<time><?php echo date("Y年m月d日". $week2 ."", $Day2) . "\n"; ?></time>
 </h3>
 
 <?php foreach ($result as $item): ?>
@@ -1307,10 +1300,9 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
   ?>
 <?php if($movie_name1 == $item['f_movie_name']) { ?>
   <div class="movie-info">
-      <h4>　<?php echo $item['f_movie_name']; ?>
-        <a href="jouhou.php" class="info-button">映画情報へ</a>　　
-      </h4>
-        </div>
+      <h4><?php echo $item['f_movie_name']; ?></h4>
+      <a href="jouhou.php" class="info-button">映画情報へ</a>
+    </div>
       <ul class="timetable">
         <div>
           <li class="theatre" >
@@ -2305,7 +2297,7 @@ $stmt->execute();
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <h3>
-<time><?php echo date("Y/m/d". $week3 ."", $Day3) . "\n"; ?></time>
+<time><?php echo date("Y年m月d日". $week3 ."", $Day3) . "\n"; ?></time>
 </h3>
 
 <?php foreach ($result as $item): ?>
@@ -2325,10 +2317,9 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
   ?>
 <?php if($movie_name1 == $item['f_movie_name']) { ?>
   <div class="movie-info">
-      <h4>　<?php echo $item['f_movie_name']; ?>
-        <a href="jouhou.php" class="info-button">映画情報へ</a>　　
-      </h4>
-        </div>
+      <h4><?php echo $item['f_movie_name']; ?></h4>
+      <a href="jouhou.php" class="info-button">映画情報へ</a>
+    </div>
       <ul class="timetable">
         <div>
           <li class="theatre" >
@@ -3323,7 +3314,7 @@ $stmt->execute();
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <h3>
-<time><?php echo date("Y/m/d". $week4 ."", $Day4) . "\n"; ?></time>
+<time><?php echo date("Y年m月d日". $week4 ."", $Day4) . "\n"; ?></time>
 </h3>
 
 <?php foreach ($result as $item): ?>
@@ -3343,10 +3334,9 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
   ?>
 <?php if($movie_name1 == $item['f_movie_name']) { ?>
   <div class="movie-info">
-      <h4>　<?php echo $item['f_movie_name']; ?>
-        <a href="jouhou.php" class="info-button">映画情報へ</a>　　
-      </h4>
-        </div>
+      <h4><?php echo $item['f_movie_name']; ?></h4>
+      <a href="jouhou.php" class="info-button">映画情報へ</a>
+    </div>
       <ul class="timetable">
         <div>
           <li class="theatre" >
@@ -4341,7 +4331,7 @@ $stmt->execute();
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <h3>
-<time><?php echo date("Y/m/d". $week5 ."", $Day5) . "\n"; ?></time>
+<time><?php echo date("Y年m月d日". $week5 ."", $Day5) . "\n"; ?></time>
 </h3>
 
 <?php foreach ($result as $item): ?>
@@ -4361,10 +4351,9 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
   ?>
 <?php if($movie_name1 == $item['f_movie_name']) { ?>
   <div class="movie-info">
-      <h4>　<?php echo $item['f_movie_name']; ?>
-        <a href="jouhou.php" class="info-button">映画情報へ</a>　　
-      </h4>
-        </div>
+      <h4><?php echo $item['f_movie_name']; ?></h4>
+      <a href="jouhou.php" class="info-button">映画情報へ</a>
+    </div>
       <ul class="timetable">
         <div>
           <li class="theatre" >
