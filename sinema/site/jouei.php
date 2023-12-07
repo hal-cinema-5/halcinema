@@ -183,14 +183,13 @@ echo date("m/d". $week5 ."", $Day5) . "\n";
 $Day_sql5 = date("m-d", $Day5);
 
 
-
-
-
-
 }catch (PDOException $e) {
   exit('データベースに接続できませんでした。' . $e->getMessage());
 }
 ?>
+
+
+
 
 
 <!DOCTYPE html>
@@ -227,6 +226,7 @@ $Day_sql5 = date("m-d", $Day5);
     <div class="container">
       <h2 id="facility-info">上映スケジュール</h2>
 
+  <!-- 表示日付ボタン -->
   <div class="schedule-buttons">
 
   <form action="" method="post">

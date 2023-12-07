@@ -158,8 +158,6 @@ if($date <= 2){
 $week5 = $week[$date];
 $Day5 = strtotime($given . ' +4 day');
 echo date("m/d". $week5 ."", $Day5) . "\n";
-
-
 ?>
 
 
