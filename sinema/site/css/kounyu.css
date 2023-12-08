@@ -44,12 +44,12 @@ h1 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h3 time{
-  font-family: 'Monda' , sans-serif;
+h3 time {
+  font-family: "Monda", sans-serif;
   font-size: 300%;
 }
 
-h3{
+h3 {
   font-size: 100%;
   font-weight: normal;
   margin-top: 20px;
@@ -156,133 +156,110 @@ footer p {
   font-size: 16px;
 }
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
 
-
-
-
-
-
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 200px;
-      height: 100vh;
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .sidebar a {
-      color: #fff;
-      text-decoration: none;
-      margin-bottom: 10px;
-    }
-
-    .sidebar a:hover {
-      text-decoration: underline;
-    }
+.sidebar a:hover {
+  text-decoration: underline;
+}
 
 .content {
   margin: 0 auto;
   max-width: 800px;
 }
 
-.m{
+.m {
   margin: 0 500px 0 auto;
   font-size: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* 003：座席予約内容 座席購入内容 
 =============================================================================== */
 
 .ticketInfo {
-  clear:both;
-  background-repeat:no-repeat;
-  background-position:bottom;
-  padding-bottom:20px;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:10px;
-  margin-bottom:10px;
-  background-color:#F6F6F6;
+  clear: both;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #f6f6f6;
 }
 
 .ticketInfoBody {
-  padding-left:10px;
-  padding-right:10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-
-
-.ticketInfo table{
-}
-
-    .tiketInfoBody div:first-child {
+.tiketInfoBody div:first-child {
   margin: 0 5px;
   padding: 3px 5px 3px 5px;
-/*  background:#8c8c8c;*/
-background-color: #555555;
-  background:#555555;
-  color:#FFFFFF;
-/*  border-radius:3px;*/
-  width:75px;
-  font-weight:bold;
-  font-size:14px;
-  text-align:center;
+  /*  background:#8c8c8c;*/
+  background-color: #555555;
+  background: #555555;
+  color: #ffffff;
+  /*  border-radius:3px;*/
+  width: 75px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
   margin-bottom: 10px;
-    }
+}
 
 .tiketInfoBody {
   background-color: #e6e6e6;
 }
 
 .ticketInfo td {
-/*  color:#000000;*/
-  color:#555555;
-  font-size:14px;
-  padding:2px 5px 2px 5px;
-  vertical-align:middle;
+  /*  color:#000000;*/
+  color: #555555;
+  font-size: 14px;
+  padding: 2px 5px 2px 5px;
+  vertical-align: middle;
 }
 .ticketInfo .qrBox {
-  padding:8px 0px;
-  vertical-align:middle;
+  padding: 8px 0px;
+  vertical-align: middle;
 }
 
-    .seat {
-      display: inline-block;
-      width: 20px;
-      height: 30px;
-      margin: 2px;
-      text-align: center;
-      line-height: 30px;
-      background-color: #ccc;
-      text-decoration: none;
-      color: #000;
-      border-radius: 5px;
-    }
+.seat {
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+  margin: 2px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #ccc;
+  text-decoration: none;
+  color: #000;
+  border-radius: 5px;
+}
 
-.seat-list{
+.seat-list {
   text-align: center;
   list-style: none;
 }
 
-.scrn{
+.scrn {
   text-align: center;
 }
 
@@ -314,133 +291,98 @@ background-color: #555555;
   background-color: #f44336;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 003：券種選択テーブル関連
 =============================================================================== */
 
 #tkList {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 /*  入力テーブル  */
-#tkList #tickettbl{
-/*  width:100%;*/
-  min-height:39px;
-  margin-bottom:20px;
-/*  width:450px;*/
-  width:440px;
-  display:inline-block;
+#tkList #tickettbl {
+  /*  width:100%;*/
+  min-height: 39px;
+  margin-bottom: 20px;
+  /*  width:450px;*/
+  width: 440px;
+  display: inline-block;
 }
 
 /*  クーポン入力テーブル  */
-#tkList #coupontbl{
-  min-height:39px;
-  margin-bottom:20px;
-  width:450px;
-  display:inline-block;
+#tkList #coupontbl {
+  min-height: 39px;
+  margin-bottom: 20px;
+  width: 450px;
+  display: inline-block;
 }
 
 /*  確認テーブル  */
-#tkList #tickettblcnf{
-  width:600px;
-/*  width:300px;*/
-  min-height:39px;
-  margin-bottom:20px;
+#tkList #tickettblcnf {
+  width: 600px;
+  /*  width:300px;*/
+  min-height: 39px;
+  margin-bottom: 20px;
 }
 
 #tkList #tickettbl th,
 #tkList #tickettblcnf th,
-#tkList #coupontbl th{
-  padding:10px;
-  color:#FFFFFF;
-  background-color:#999999;
-  text-align:center;
-  border:solid 1px #FFFFFF;
-  vertical-align:middle;
+#tkList #coupontbl th {
+  padding: 10px;
+  color: #ffffff;
+  background-color: #999999;
+  text-align: center;
+  border: solid 1px #ffffff;
+  vertical-align: middle;
 }
 
 #tkList #tickettbl td,
 #tkList #tickettblcnf td,
-#tkList #coupontbl td{
-  text-align:center;
-  color:#333333;
-  background-color:#F6F6F6;
-  border:solid 1px #FFFFFF;
-  padding:3px;
+#tkList #coupontbl td {
+  text-align: center;
+  color: #333333;
+  background-color: #f6f6f6;
+  border: solid 1px #ffffff;
+  padding: 3px;
 }
 
 #tickettbl > tbody > tr,
-#coupontbl > tbody > tr{
+#coupontbl > tbody > tr {
   height: 30px;
 }
 
 #tickettbl > tbody > tr.addPrice,
-#coupontbl > tbody > tr.addPrice{
+#coupontbl > tbody > tr.addPrice {
   height: 90px;
 }
 
-#tkList #tickettblcnf .alignleft{
-  text-align:left;
+#tkList #tickettblcnf .alignleft {
+  text-align: left;
 }
 
-#tkList .col01{
-  width:10px;
+#tkList .col01 {
+  width: 10px;
 }
-#tkList .col02{
-  width:65px;
+#tkList .col02 {
+  width: 65px;
 }
-#tkList .col03{
-  width:220px;
+#tkList .col03 {
+  width: 220px;
 }
-#tkList .col04{
-  width:150px;
+#tkList .col04 {
+  width: 150px;
 }
-#tkList .col05{
-  width:140px;
+#tkList .col05 {
+  width: 140px;
 }
-#tkList .col06{
-  width:60px;
+#tkList .col06 {
+  width: 60px;
 }
-#tkList .col07{
-  width:60px;
+#tkList .col07 {
+  width: 60px;
 }
 
-#tkList #coupontbl .inputcol{
-  width:450px;
+#tkList #coupontbl .inputcol {
+  width: 450px;
 }
 
 #tkList #coupontbl tr:nth-child(n + 1) > td {
@@ -488,31 +430,28 @@ background-color: #555555;
   font-weight: bold;
 }
 
-
 #tkList #coupontbl.hidden-area {
   display: none;
 }
 
 /* エラー文 */
-#errorPut{
-  clear:both;
-  padding:5px 0;
-  color:#c30;
-  font-weight:bold;
-  text-align:right
+#errorPut {
+  clear: both;
+  padding: 5px 0;
+  color: #c30;
+  font-weight: bold;
+  text-align: right;
 }
 
 /* 注意文 */
 #tkNotice {
-  clear:both;
-  padding-top:15px
+  clear: both;
+  padding-top: 15px;
 }
 #tkNotice p {
-  clear:both;
-  padding:5px 0;
+  clear: both;
+  padding: 5px 0;
 }
-
-
 
 /* 座席エリア設定 */
 /*
@@ -584,36 +523,33 @@ background-color: #555555;
 /* アラートエリア*/
 
 .noticeBox {
-  width:747px;
-  margin-top:6px;
-  margin-bottom:3px;
-/*  margin-left:auto;*/
-/*  margin-right:auto;*/
-/*  background-color:#ff8a00;*/
+  width: 747px;
+  margin-top: 6px;
+  margin-bottom: 3px;
+  /*  margin-left:auto;*/
+  /*  margin-right:auto;*/
+  /*  background-color:#ff8a00;*/
 }
 .noticeBox p {
-  padding:11px 0px;
+  padding: 11px 0px;
 }
 .noticeBox p em {
-  color:#FD8B60;
-  font-size:120%;
-  font-weight:bold;
+  color: #fd8b60;
+  font-size: 120%;
+  font-weight: bold;
 }
-
-
-
 
 /* SSL マーク群*/
 
 #sslmarks {
-  margin:25px 0 0;
+  margin: 25px 0 0;
 }
 #sslmarks div {
-  float:left;
-  margin:0 15px 0 0;
+  float: left;
+  margin: 0 15px 0 0;
 }
 #sslmarks p {
-  font-size:83%;
+  font-size: 83%;
 }
 
 #clearCart {
@@ -621,28 +557,12 @@ background-color: #555555;
   display: inline;
 }
 
-
 /* kounyu.css */
 
 .seat.selected {
   background-color: red; /* クリック時の背景色 */
   color: white; /* クリック時のテキスト色 */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* サイドメニューのスタイル */
 .sidebar {
@@ -675,30 +595,7 @@ background-color: #555555;
   text-decoration: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ここから */
-
 
 .example2 {
   display: flex;
@@ -716,7 +613,7 @@ background-color: #555555;
   display: block;
   width: 20px;
   height: 30px;
-  background: #A0D8EF;
+  background: #a0d8ef;
   color: #000;
   padding: 0px;
   margin: 0 3px 0 3px;
@@ -726,16 +623,18 @@ background-color: #555555;
   cursor: pointer;
   border-radius: 15%;
 }
+.example2 label p {
+  font-size: 1.15rem;
+}
 
-.example2 input:checked+label {
-  background: #E45E32;
-  color: #FFF;
+.example2 input:checked + label {
+  background: #e45e32;
+  color: #fff;
 }
 
 .example2 input {
   display: none;
 }
-
 
 .aokikuso {
   display: flex;
@@ -743,10 +642,10 @@ background-color: #555555;
   margin-bottom: 10px;
 }
 
-.aoki{
+.aoki {
   font-size: 20px;
 }
-label#ng{
+label#ng {
   display: block;
   width: 20px;
   height: 30px;
