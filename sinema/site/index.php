@@ -1,24 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<?php
-
-session_start();
-$name = $_SESSION['name'] ;
-// print("ユーザー:".$name);
-?>
-
 <head>
   <meta charset="UTF-8">
   <title>映画館施設案内</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/allpage.css">
-<link rel="stylesheet" type="text/css" href="css/index.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 </head>
 <body>
   <div class="sidebar">
-    <div class="close">
+    <div class="closemenu">
       <p class="menu">メニュー</p>
       <button id="sidebar-close-menu">×</button>
     </div>
@@ -50,25 +42,25 @@ $name = $_SESSION['name'] ;
           <li class="slider-item"><img src="images/jinmengyo.jpg" class="topga" alt="Slide 3"></li>
         </a>
       </ul>
-      <br><br><br><br>
+      <div class="twitter"></div>
       <h2>お知らせ</h2>
       <a class="twitter-timeline" href="https://twitter.com/hal_nagoya?ref_src=twsrc%5Etfw">Tweets by hal_nagoya</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
 
-      <footer class="footer">
-        <div class="md-flex md-justify-between">
-          <p class="footerp">HALシネマ</p>
-          <ul class="footer__navi flex">
-            <li><a href="index.php">TOP</a></li>
-            <li><a href="https://twitter.com/hal_nagoya?ref_src=twsrc%5Etfw">TWITTER</a></li>
-            <li><a href="sisetu.php">ABOUT</a></li>
-          </ul>
-        </div>
-    <hr />
-    <p class="copyright">
-      © 2023 halcinema All Rights Reserved.
-    </p>
-  </footer>
+    <footer class="footer">
+      <div class="md-flex md-justify-between">
+        <p class="footerp">HALシネマ</p>
+        <ul class="footer__navi flex">
+          <li><a href="index.php">TOP</a></li>
+          <li><a href="https://twitter.com/hal_nagoya?ref_src=twsrc%5Etfw">TWITTER</a></li>
+          <li><a href="sisetu.php">ABOUT</a></li>
+        </ul>
+      </div>
+      <hr />
+      <p class="copyright">
+        © 2023 halcinema All Rights Reserved.
+      </p>
+    </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

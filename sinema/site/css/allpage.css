@@ -1,11 +1,13 @@
 /* 全体の設定 */
-html {
-  font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #fff;
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
 }
 
 ul {
@@ -77,14 +79,15 @@ h1 {
   transition: right 0.3s ease;
   z-index: 1000;
 }
-.close {
+.closemenu {
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  padding-bottom: 20px;
   border-bottom: 2px solid #9ca3af;
 }
-.close .menu {
+.closemenu .menu {
   font-size: 1.5rem;
   font-weight: bold;
   padding-top: 10px;
@@ -92,7 +95,7 @@ h1 {
 #sidebar-close-menu {
   max-height: 40px;
   padding-right: 10px;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #fff;
   border: none;
   background-color: rgba(0, 0, 0, 0);
@@ -128,6 +131,7 @@ h1 {
   position: relative;
   top: 80px;
   max-width: 800px;
+  height: 100vh;
   margin: 0px auto;
   background-color: #fff;
   padding: 20px;

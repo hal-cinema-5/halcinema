@@ -1,23 +1,7 @@
-/* 共通のスタイル */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-}
-
 h2 {
   border-left: solid 10px #afdfe4;
   font-size: 20px;
   margin-bottom: 10px;
-}
-
-p {
-  margin-bottom: 20px;
 }
 
 /* Screen Table */
@@ -202,4 +186,8 @@ a.topjo:hover {
 
 .slick-dots .slick-active button {
   background: #333;
+}
+
+.twitter {
+  margin-top: 80px;
 }
