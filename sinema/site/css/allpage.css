@@ -1,0 +1,176 @@
+/* 全体の設定 */
+html {
+  font-family: sans-serif;
+}
+
+body {
+  background: #fff;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* ヘッダー */
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 25px;
+  z-index: 500;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.m {
+  font-weight: bold;
+}
+.m p {
+  font-size: 20px;
+  padding-right: 20px;
+  margin: auto;
+}
+.m p:hover {
+  color: #9ca3af;
+}
+
+#sidebar-toggle {
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* サイドバー */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+.close {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #9ca3af;
+}
+.close .menu {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-top: 10px;
+}
+#sidebar-close-menu {
+  max-height: 40px;
+  padding-right: 10px;
+  font-size: 2rem;
+  color: #fff;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+#sidebar-close-menu:hover {
+  color: #9ca3af;
+}
+
+.sidebar a {
+  color: #fff;
+  font-size: 1.3rem;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.show-sidebar {
+  right: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+.container {
+  position: relative;
+  top: 80px;
+  max-width: 800px;
+  margin: 0px auto;
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* フッター */
+.footer {
+  margin-top: 80px;
+  padding: 2rem;
+  font-size: 15px;
+  color: #9ca3af;
+  background-color: #333;
+}
+
+.footer .footerp {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.footer__navi {
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.footer__navi li {
+  display: inline-block;
+}
+
+.footer__navi li:not(:last-child) {
+  margin-right: 16px;
+}
+
+/* レスポンシブ設定 */
+@media (min-width: 768px) {
+  .md-flex {
+    display: flex;
+  }
+
+  .md-justify-between {
+    justify-content: space-between;
+  }
+
+  .copyright {
+    text-align: left;
+  }
+}

@@ -10,42 +10,8 @@ body {
   background-color: #f2f2f2;
 }
 
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-}
-
-h1 {
-  font-size: 24px;
-  margin: 0;
-  margin-right: 70px;
-}
-
-#sidebar-toggle {
-  font-size: 16px;
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* Main Content */
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
 h2 {
-  border-left: solid 10px #AFDFE4;
+  border-left: solid 10px #afdfe4;
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -92,7 +58,7 @@ p {
   color: #666;
 }
 
-.topga{
+.topga {
   width: 800px;
   height: 400px;
 }
@@ -100,7 +66,7 @@ p {
 /* sisetu.css */
 
 .topjo:hover img {
-background-color: #fff;
+  background-color: #fff;
   opacity: 0.7;
 
   filter: alpha(opacity=70);
@@ -116,25 +82,6 @@ a.topjo:hover {
   filter: alpha(opacity=70);
 
   -ms-filter: "alpha(opacity=70)";
-}
-
-
-/* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-footer p {
-  margin-bottom: 0;
-}
-
-.cinema-image {
-  display: block;
-  max-width: 100%;
-  margin-top: 20px;
 }
 
 .gyoukan {
@@ -172,101 +119,15 @@ footer p {
   font-size: 16px;
 }
 
-
-
-
-
-
-
-
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 200px;
-      height: 100vh;
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .sidebar a {
-      color: #fff;
-      text-decoration: none;
-      margin-bottom: 10px;
-    }
-
-    .sidebar a:hover {
-      text-decoration: underline;
-    }
-
-.content {
-  margin: 0 auto;
-  max-width: 800px;
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.m{
-  margin: 0 500px 0 auto;
-  font-size: 20px;
+.slider-item {
+  text-align: center;
 }
-
-
-
-
-
-
-
-
-
-/* サイドメニューのスタイル */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -300px;
-  width: 300px;
-  height: 100vh;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  transition: left 0.3s ease;
-}
-
-.show-sidebar {
-  left: 0;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar li {
-  margin-bottom: 10px;
-}
-
-.sidebar a {
-  color: #fff;
-  text-decoration: none;
-}
-
-
-
-
-
-
-    .slider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-
-    .slider-item {
-      text-align: center;
-    }
 
 /* スライダーのボタン */
 .slick-prev,
@@ -301,7 +162,6 @@ footer p {
   display: none;
 }
 
-
 .slick-prev {
   left: 20px;
 }
@@ -318,29 +178,28 @@ footer p {
   border-left: 10px solid #fff;
 }
 
+.slick-dots {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin: -50px 0 0 0;
+}
 
-    .slick-dots {
-      position: relative;
-      z-index: 3;
-      text-align: center;
-      margin: -50px 0 0 0;
-    }
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
 
-    .slick-dots li {
-      display: inline-block;
-      margin: 0 5px;
-    }
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 50%;
+  background: #fff;
+}
 
-    .slick-dots button {
-      color: transparent;
-      outline: none;
-      width: 8px;
-      height: 8px;
-      display: block;
-      border-radius: 50%;
-      background: #fff;
-    }
-
-    .slick-dots .slick-active button {
-      background: #333;
-    }
+.slick-dots .slick-active button {
+  background: #333;
+}
