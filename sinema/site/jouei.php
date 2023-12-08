@@ -1,4 +1,8 @@
-<?php 
+<?php
+//SESSIONのエラー表示削除
+ini_set('display_errors',0);
+
+
 try{
 
 require('dbpdo.php');
@@ -12,11 +16,11 @@ $day4_p = $_POST['selected_days4'];
 $day5_p = $_POST['selected_days5'];
 
 
-echo "1日目$day1_p  ";
-echo "2日目$day2_p  ";
-echo "3日目$day3_p  ";
-echo "4日目$day4_p  ";
-echo "5日目$day5_p  ";
+// echo "1日目$day1_p  ";
+// echo "2日目$day2_p  ";
+// echo "3日目$day3_p  ";
+// echo "4日目$day4_p  ";
+// echo "5日目$day5_p  ";
 
 
 
@@ -28,7 +32,7 @@ unset($_SESSION['movieday']);
 // 日付取得
 $given = date('Y-m-d');
 $day1 = date('H/i/s');
-echo "$day1";
+// echo "$day1";
 
 
 
@@ -61,7 +65,7 @@ $week = [
 $date = date('w');
 //日本語で曜日を出力
 $week1 = $week[$date];
-echo date("m/d". $week1 ."") . "\n";
+// echo date("m/d". $week1 ."") . "\n";
 
 
 
@@ -85,7 +89,7 @@ $date = $date + 1;
 //日本語で曜日を出力
 $week2 = $week[$date];
 $Day2 = strtotime($given . ' +1 day');
-echo date("m/d". $week2 ."", $Day2) . "\n";
+// echo date("m/d". $week2 ."", $Day2) . "\n";
 $Day_sql2 = date("m-d", $Day2);
 
 
@@ -114,7 +118,7 @@ if($date == 6){
 //日本語で曜日を出力
 $week3 = $week[$date];
 $Day3 = strtotime($given . ' +2 day');
-echo date("m/d". $week3 ."", $Day3) . "\n";
+// echo date("m/d". $week3 ."", $Day3) . "\n";
 $Day_sql3 = date("m-d", $Day3);
 
 
@@ -145,7 +149,7 @@ if($date <= 3){
 //日本語で曜日を出力
 $week4 = $week[$date];
 $Day4 = strtotime($given . ' +3 day');
-echo date("m/d". $week4 ."", $Day4) . "\n";
+// echo date("m/d". $week4 ."", $Day4) . "\n";
 $Day_sql4 = date("m-d", $Day4);
 
 
@@ -179,7 +183,7 @@ if($date <= 2){
 //日本語で曜日を出力
 $week5 = $week[$date];
 $Day5 = strtotime($given . ' +4 day');
-echo date("m/d". $week5 ."", $Day5) . "\n";
+// echo date("m/d". $week5 ."", $Day5) . "\n";
 $Day_sql5 = date("m-d", $Day5);
 
 

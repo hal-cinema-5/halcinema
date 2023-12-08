@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>上映スケジュール</title>
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/allpage.css">
   <link rel="stylesheet" href="css/sisetu.css">
 </head>
 <body>
