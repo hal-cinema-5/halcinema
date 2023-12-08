@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+if(isset($_SESSION['name'])){
+  $loginuser = $_SESSION['name'];
+}else{
+  $loginuser = "なし";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -22,6 +33,14 @@
       <li><a href="login.php">ログイン</a></li>
       <li><a href="user.php">ユーザーページ</a></li>
     </ul>
+    <div class="loginuser">
+      <p>ユーザー：</p>
+      <p class="user">
+        <?php
+          echo $loginuser;
+        ?>
+      </p>
+    </div>
   </div>
 
   <div class="content">

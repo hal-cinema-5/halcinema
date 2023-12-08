@@ -2,7 +2,7 @@
 require('db/dbpdo.php');
 
 session_start();
-$name = $_SESSION['name'] ;
+$name = $_SESSION['f_user_name'] ;
 print( $name."さん" );
 
 $sql = (" SELECT * FROM `t_user` WHERE f_user_name = '" . $name . "' "); //SQL文
@@ -14,3 +14,4 @@ print("予約番号".$data[0][5]);
 ?>
 
 <a href="cancelcheck.php">cancel</a>
+<a href="components/logout.php">ログアウト</a>

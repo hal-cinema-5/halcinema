@@ -7,6 +7,13 @@ try{
 
 require('dbpdo.php');
 session_start();
+
+if(isset($_SESSION['name'])){
+  $loginuser = $_SESSION['name'];
+}else{
+  $loginuser = "なし";
+}
+
 $day1_p          = $_SESSION['day1_p'];
 $selected_days1  = $_POST['selected_days1'];
 // $day1_p = "";
@@ -190,6 +197,8 @@ $Day_sql5 = date("m-d", $Day5);
 }catch (PDOException $e) {
   exit('データベースに接続できませんでした。' . $e->getMessage());
 }
+
+
 ?>
 
 
@@ -219,6 +228,14 @@ $Day_sql5 = date("m-d", $Day5);
       <li><a href="login.php">ログイン</a></li>
       <li><a href="user.php">ユーザーページ</a></li>
     </ul>
+    <div class="loginuser">
+      <p>ユーザー：</p>
+      <p class="user">
+        <?php
+          echo $loginuser;
+        ?>
+      </p>
+    </div>
   </div>
 
   <div class="content">
