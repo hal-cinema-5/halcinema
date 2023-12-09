@@ -2,10 +2,9 @@
 //SESSIONのエラー表示削除
 ini_set('display_errors',0);
 
-
 try{
 
-require('dbpdo.php');
+require('db/dbpdo.php');
 session_start();
 
 if(isset($_SESSION['name'])){
@@ -98,8 +97,6 @@ $week2 = $week[$date];
 $Day2 = strtotime($given . ' +1 day');
 // echo date("m/d". $week2 ."", $Day2) . "\n";
 $Day_sql2 = date("m-d", $Day2);
-
-
 
 //3日目表示
 //配列を使用し、要素順に(日:0〜土:6)を設定する
@@ -200,10 +197,6 @@ $Day_sql5 = date("m-d", $Day5);
 
 
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="ja">

@@ -1,9 +1,15 @@
-h2 {
-  border-left: solid 10px #afdfe4;
-  font-size: 20px;
-  margin-bottom: 10px;
+.twitter {
+  margin-bottom: 20px;
 }
 
+.twitter h2 {
+  border-left: solid 10px #48edff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.twitter h2 p {
+  padding-left: 10px;
+}
 /* Screen Table */
 .screen-table {
   width: 100%;

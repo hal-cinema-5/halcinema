@@ -61,9 +61,10 @@ if(isset($_SESSION['name'])){
           <li class="slider-item"><img src="images/jinmengyo.jpg" class="topga" alt="Slide 3"></li>
         </a>
       </ul>
-      <div class="twitter"></div>
-      <h2>お知らせ</h2>
-      <a class="twitter-timeline" href="https://twitter.com/hal_nagoya?ref_src=twsrc%5Etfw">Tweets by hal_nagoya</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <div class="twitter">
+        <h2 class="info"><p>お知らせ</p></h2>
+        <a class="twitter-timeline" href="https://twitter.com/hal_nagoya?ref_src=twsrc%5Etfw">Tweets by hal_nagoya</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
     </div>
 
     <footer class="footer">
