@@ -66,6 +66,7 @@ if(isset($_SESSION['name'])){
         <a class="twitter-timeline" href="https://twitter.com/hal_nagoya?ref_src=twsrc%5Etfw">Tweets by hal_nagoya</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
     </div>
+  </div>
 
     <footer class="footer">
       <div class="md-flex md-justify-between">
