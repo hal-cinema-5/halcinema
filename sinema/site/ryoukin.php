@@ -17,7 +17,6 @@ if(isset($_SESSION['name'])){
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/allpage.css">
   <link rel="stylesheet" href="css/ryoukin.css">
-<link rel="stylesheet" type="text/css" href="css/ryoukin.css">
 </head>
 <body>
   <div class="sidebar">
@@ -74,30 +73,94 @@ if(isset($_SESSION['name'])){
       </div>
 
       <h2 id="facility-info">フード料金</h2>
-      <div class="price">
-        <div class="priceinfo">
-          <h2>ああああ</h2>
-          <p>円</p>
+      <div class="foodprice">
+        <h1>セットメニュー</h1>
+        <div class="foodpriceinfo">
+          <div>
+            <h2>スタンダードセット</h2>
+            <p>ポップコーンL + フリードリンク</p>
+          </div>
+          <p>1100円</p>
         </div>
-        <div class="priceinfo">
-          <h2>ああああ</h2>
-          <p>円</p>
+        <div class="foodpriceinfo">
+          <div>
+            <h2>ペアセット</h2>
+            <p>ポップコーンK + フリードリンク×2</p>
+          </div>
+          <p>1700円</p>
         </div>
-        <div class="priceinfo">
-          <h2>ああああ</h2>
-          <p>円</p>
+        <div class="foodpriceinfo">
+          <div>
+            <h2>ホットドッグセット</h2>
+            <p>お好きなホットドッグ + フリードリンク</p>
+          </div>
+          <p>1050円</p>
         </div>
-        <div class="priceinfo">
-          <h2>ああああ</h2>
-          <p>円</p>
+        <div class="foodpriceinfo">
+          <div>
+            <h2>唐揚げ(5個)セット</h2>
+            <h2>唐揚げ(3個)＆ポテトセット</h2>
+            <h2>フライドポテトセット</h2>
+          </div>
+          <p>1050円</p>
         </div>
-        <div class="priceinfo">
-          <h2>ああああ</h2>
-          <p>円</p>
+        <div class="foodpriceinfolast">
+          <div>
+            <h2>ドーナツセット</h2>
+            <p>お好きなドーナツ + フリードリンク</p>
+          </div>
+          <p>700円</p>
         </div>
-        <div class="priceinfolast">
-          <h2>ああああ</h2>
-          <p>円</p>
+        <h1>単品</h1>
+        <div class="foodpriceinfo">
+          <div>
+            <h2>ドーナツ</h2>
+            <p>プレーン・抹茶ホワイト・アーモンドチョコ・クッキー＆クリーム・フランポワーズショコラ・シナモン＆カレンツくるみ</p>
+          </div>
+          <p>260~300円</p>
+        </div>
+        <div class="foodpriceinfo">
+          <div>
+            <h2>アイスクリーム</h2>
+            <p>バニラ・チョコ・ミックス</p>
+          </div>
+          <p>650円</p>
+        </div>
+        <div class="foodpriceinfo">
+          <div>
+            <h2>ソフトドリンク</h2>
+            <p>S・M・L・フリードリンク</p>
+          </div>
+          <p>450~600円</p>
+        </div>
+        <div class="foodpriceinfo">
+          <div>
+            <h2>ポップコーン</h2>
+            <p>塩・キャラメル・ハーフ＆ハーフ</p>
+          </div>
+          <p>600~800円</p>
+        </div>
+        <div class="foodpriceinfo">
+          <div>
+            <h2>ホットドッグ</h2>
+            <p>サルサ・チーズ</p>
+          </div>
+          <p>650円</p>
+        </div>
+        <div class="foodpriceinfo">
+          <div>
+            <h2>フライドポテト</h2>
+            <h2>唐揚げ(5個)</h2>
+            <h2>唐揚げ(3個)＆ポテト</h2>
+          </div>
+          <p>600円</p>
+        </div>
+        <div class="foodpriceinfolast">
+          <div>
+            <h2>生ビール</h2>
+            <p>M・L</p>
+          </div>
+          <p>750~800円</p>
         </div>
       </div>
     </div>
@@ -116,7 +179,7 @@ if(isset($_SESSION['name'])){
         © 2023 halcinema All Rights Reserved.
       </p>
     </footer>
-<script src="js/sisetu.js" type="text/javascript"></script>
+    <script src="js/sisetu.js" type="text/javascript"></script>
 
   </body>
 </html>

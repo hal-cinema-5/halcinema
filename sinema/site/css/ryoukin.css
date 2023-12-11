@@ -36,3 +36,39 @@
   color: red;
   margin-bottom: 30px;
 }
+
+.foodprice {
+  width: 100%;
+  background-color: #eee;
+  border-radius: 5px;
+}
+.foodprice h1 {
+  padding: 15px 20px;
+  text-align: center;
+  background-color: #ccc;
+}
+.foodpriceinfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #9ca3af;
+}
+.foodpriceinfolast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+.foodpriceinfo div {
+  width: 80%;
+}
+.foodpriceinfolast div {
+  width: 80%;
+}
+.foodpriceinfo p {
+  font-size: 1.2rem;
+}
+.foodpriceinfolast p {
+  font-size: 1.2rem;
+}
