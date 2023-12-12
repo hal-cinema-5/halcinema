@@ -1,5 +1,47 @@
-#facility-info {
-  padding-top: 20px;
+/* 共通のスタイル */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  margin-right: 70px;
+}
+
+#sidebar-toggle {
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Main Content */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .schedule-buttons {
@@ -8,19 +50,23 @@
   margin-top: 20px;
 }
 
-.schedule-buttons .Box {
+.schedule-button {
   width: 120px;
-  height: 80px;
-  background-color: deepskyblue;
+  height: 120px;
+  background-color: #4e82b8;
   border: none;
-  font-weight: bold;
-  border-radius: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* 追加: ホバー時のアニメーション効果 */
 }
 
-.schedule-buttons .Box:hover {
-  background-color: #396088;
-  color: #f6f6f6;
+.schedule-button:hover {
+  background-color: #306090; /* 追加: ホバー時の背景色 */
 }
 
 .schedule-date {
@@ -29,9 +75,8 @@
   color: #fff;
 }
 
-h3 time {
-  padding: 20px 20px 0px 0;
-  font-family: "Monda", sans-serif;
+h3 time{
+  font-family: 'Monda' , sans-serif;
   font-size: 300%;
 }
 
@@ -49,34 +94,51 @@ h3 header {
 }
 
 .movie-info {
-  position: relative;
-  width: 100%;
-  height: 50px;
-  margin: 20px 0;
-  background-color: #333;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 
-.movie-info a {
-  padding: 6px 12px 6px 12px;
-  background-color: #4da7d8;
-  border-radius: 5px;
-  position: absolute;
-  right: 10px;
-  top: 7px;
-  color: #fff;
+
+.movie-info h2 {
+  margin-right: 20px;
+  font-size: 24px;
 }
-.info-button {
-  text-decoration: none;
-}
+
 .movie-info h4 {
-  position: absolute;
-  left: 20px;
-  top: 10px;
-  color: #ffffff;
-  font-size: 1.3rem;
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1px;
 }
+
+.movie-info .info-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4e82b8;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 16px; /* 追加: ボタンのフォントサイズ */
+}
+
 .movie-info .info-button:hover {
   background-color: #306090;
+}
+
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
 }
 
 /* Screen Table */
@@ -117,6 +179,112 @@ h3 header {
   color: #666;
 }
 
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+.cinema-image {
+  display: block;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.gyoukan {
+  font-size: 16px;
+  line-height: 30px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  color: #555;
+}
+
+.image-text-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.image-text-container img {
+  width: 300px;
+  margin-right: 20px;
+}
+
+.image-text-container .text {
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.address {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+    /* 追加されたCSS */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100vh;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .sidebar a {
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+.content {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.m{
+  margin: 0 500px 0 auto;
+  font-size: 20px;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li a{
+  display: block;
+  color: #333;
+}
+
 .timetable {
   width: 120px;
   height: 120px;
@@ -125,6 +293,7 @@ h3 header {
   flex-direction: column;
   justify-content: center;
 }
+
 
 ul.timetable {
   display: flex;
@@ -139,18 +308,18 @@ ul.timetable li {
   background: #f6f6f6;
   overflow: hidden;
   text-align: right;
-  border-left: 4px solid #fff;
-  border-top: 4px solid #fff;
+  border-left: 4px solid #FFF;
+  border-top: 4px solid #FFF;
 }
 
-.timetable a {
+a{
   text-decoration: none;
 }
 ul.timetable li:last-child {
-  border-right: 4px solid #fff;
+  border-right: 4px solid #FFF;
 }
 ul.timetable li:nth-child(7) {
-  margin-left: 150px; /* timetable2 廃止 */
+  margin-left: 150px;/* timetable2 廃止 */
 }
 
 ul.timetable li.theatre {
@@ -158,7 +327,7 @@ ul.timetable li.theatre {
   border-left: none;
   color: #666;
   text-align: center;
-  background: #fff; /* SP対応 */
+  background: #fff;/* SP対応 */
 }
 ul.timetable li.theatre-num {
   font-size: 220%;
@@ -176,7 +345,7 @@ ul.timetable li small {
 
 ul.timetable li .theatre-num,
 ul.timetable li time {
-  font-family: "Monda", sans-serif;
+  font-family: 'Monda', sans-serif;
 }
 ul.timetable li time.start {
   font-size: 220%;
@@ -185,12 +354,12 @@ ul.timetable li time.start {
 }
 
 @media only print {
-  ul.timetable li .theatre-num {
-    font-size: 100%;
-  }
-  ul.timetable li time.start {
-    font-size: 100%;
-  }
+ul.timetable li .theatre-num {
+  font-size: 100%;
+}
+ul.timetable li time.start {
+  font-size: 100%;
+}
 }
 
 ul.timetable li a {
@@ -202,7 +371,7 @@ ul.timetable li a {
 .timetable2 li a:hover span, */
 ul.timetable li a:hover {
   /* background-color: #EEE; */
-  color: #4da7d8;
+  color: #4DA7D8;
 }
 
 ul.timetable li a:hover .available,
@@ -211,13 +380,14 @@ ul.timetable li a:hover .remaining {
   opacity: 0.8;
 }
 
+
 .close,
 .soldout,
 .remaining,
 .available,
 .others {
-  color: #fff;
-  padding: 4px;
+  color: #FFF;
+  padding: 5px;
   text-align: center;
 }
 .others {
@@ -229,11 +399,11 @@ ul.timetable li a:hover .remaining {
 .others {
   background: #999;
 }
-.remaining {
+.remaining{
   background: #3eb370;
 }
 .available {
-  background: #4da7d8;
+  background: #4DA7D8;
 }
 
 .close:before,
@@ -242,11 +412,11 @@ ul.timetable li a:hover .remaining {
 .available:before {
   display: block;
   float: left;
-  background: #fff;
+  background: #FFF;
+  padding: 2px 2px 2px 2px;
   font-weight: bold;
-  padding: 3px;
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   font-size: 17px;
 }
 .close:before {
@@ -259,11 +429,11 @@ ul.timetable li a:hover .remaining {
 }
 .remaining:before {
   content: "△";
-  color: #f96;
+  color: #F96;
 }
 .available:before {
   content: "◯";
-  color: #4da7d8;
+  color: #4DA7D8;
 }
 
 #update {
@@ -284,6 +454,7 @@ ul.timetable li a:hover .remaining {
 /* RESPONSIVE */
 
 @media only screen and (max-width: 480px) {
+  
   #timetable,
   ul {
     width: 100%;
@@ -313,7 +484,7 @@ ul.timetable li a:hover .remaining {
     width: 100%;
     margin-bottom: 0.5em;
   }
-
+  
   ul {
     padding: 0 2px;
     background: #fff;
@@ -322,7 +493,7 @@ ul.timetable li a:hover .remaining {
   ul.timetable li {
     font-size: 0.5rem;
     width: 25%;
-    border: 2px solid #fff;
+    border: 2px solid #FFF;
   }
   ul.timetable li .long-name {
     /*font-size: 1rem;*/
@@ -331,16 +502,17 @@ ul.timetable li a:hover .remaining {
     background: #fff;
   }
   ul.timetable li:nth-child(5) {
-    margin-left: 25%; /* timetable2 廃止 */
+    margin-left: 25%;/* timetable2 廃止 */
   }
   ul.timetable li:nth-child(7) {
-    margin-left: 0; /* timetable2 廃止 */
+    margin-left: 0;/* timetable2 廃止 */
   }
   ul.timetable li:last-child {
-    border: 2px solid #fff;
+    border: 2px solid #FFF;
   }
   ul.timetable li time.start {
     font-size: 1.2rem;
+    
   }
   .close:before,
   .soldout:before,
@@ -356,7 +528,7 @@ ul.timetable li a:hover .remaining {
     font-size: 0.8rem;
     padding: 0 10px;
   }
-
+  
   /* MAINTENANCE */
   #maintenance h1 {
     font-size: 1.4rem;
@@ -366,4 +538,41 @@ ul.timetable li a:hover .remaining {
     overflow: auto;
     clear: both;
   }
+
 }
+
+
+
+
+/* サイドメニューのスタイル */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  transition: left 0.3s ease;
+}
+
+.show-sidebar {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+

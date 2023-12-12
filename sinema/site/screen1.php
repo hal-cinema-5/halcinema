@@ -1,11 +1,6 @@
 <?php
 session_start();
 
-if(isset($_SESSION['name'])){
-  $loginuser = $_SESSION['name'];
-}else{
-  $loginuser = "なし";
-}
 
 if($_SESSION['movieID']){
   $movie_name = $_SESSION['movieID'];
@@ -21,9 +16,12 @@ $_SESSION['movieID'] = $movie_name;
 $_SESSION['movietime'] = $movie_time;
 $_SESSION['movieday'] = $movie_day;
 
-// print($movie_name);
-// print($movie_time);
-// print($movie_day);
+
+
+
+print($movie_name);
+print($movie_time);
+print($movie_day);
 $given = date('Y-m-d');
 // $_SESSION['movieID'] = $movie_id;
 
@@ -43,7 +41,7 @@ $week = [
 $date = date('w');
 //日本語で曜日を出力
 $week1 = $week[$date];
-// echo date("Y/m/d". $week1 ."") . "\n";
+echo date("Y/m/d". $week1 ."") . "\n";
 
 
 //2日目表示
@@ -66,7 +64,7 @@ $date = $date + 1;
 //日本語で曜日を出力
 $week2 = $week[$date];
 $Day2 = strtotime($given . ' +1 day');
-// echo date("m/d". $week2 ."", $Day2) . "\n";
+echo date("m/d". $week2 ."", $Day2) . "\n";
 
 
 
@@ -94,7 +92,7 @@ if($date == 6){
 //日本語で曜日を出力
 $week3 = $week[$date];
 $Day3 = strtotime($given . ' +2 day');
-// echo date("m/d". $week3 ."", $Day3) . "\n";
+echo date("m/d". $week3 ."", $Day3) . "\n";
 
 
 
@@ -125,7 +123,7 @@ if($date <= 3){
 //日本語で曜日を出力
 $week4 = $week[$date];
 $Day4 = strtotime($given . ' +3 day');
-// echo date("m/d". $week4 ."", $Day4) . "\n";
+echo date("m/d". $week4 ."", $Day4) . "\n";
 
 
 
@@ -159,9 +157,10 @@ if($date <= 2){
 //日本語で曜日を出力
 $week5 = $week[$date];
 $Day5 = strtotime($given . ' +4 day');
-// echo date("m/d". $week5 ."", $Day5) . "\n";
-
+echo date("m/d". $week5 ."", $Day5) . "\n";
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -169,37 +168,25 @@ $Day5 = strtotime($given . ' +4 day');
   <meta charset="UTF-8">
   <title>映画館施設案内</title>
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/allpage.css">
   <link rel="stylesheet" href="css/kounyu.css">
+<link rel="stylesheet" type="text/css" href="css/kounyu.css">
 </head>
 <body>
   <div class="sidebar">
-    <div class="closemenu">
-      <p class="menu">メニュー</p>
-      <button id="sidebar-close-menu">×</button>
-    </div>
     <ul>
-      <li><a href="index.php">トップページ</a></li>
-      <li><a href="jouei.php">上映スケジュール</a></li>
-      <li><a href="sisetu.php">施設情報</a></li>
-      <li><a href="ryoukin.php">料金一覧</a></li>
-      <li><a href="login.php">ログイン</a></li>
-      <li><a href="user.php">ユーザーページ</a></li>
+      <li><a href="index.html">トップページ</a></li>
+      <li><a href="jouei.html">上映スケジュール</a></li>
+      <li><a href="sisetu.html">施設情報</a></li>
+      <li><a href="ryoukin.html">料金一覧</a></li>
+      <li><a href="login.html">ログイン</a></li>
     </ul>
-    <div class="loginuser">
-      <p>ユーザー：</p>
-      <p class="user">
-        <?php
-          echo $loginuser;
-        ?>
-      </p>
-    </div>
+<button id="sidebar-close-menu">閉じる</button>
   </div>
 
   <div class="content">
     <header>
+      <button id="sidebar-toggle" class="m">メニュー</button>
       <h1>HALシネマ</h1>
-      <button id="sidebar-toggle" class="m"><p>メニュー</p></button>
     </header>
 
     <div class="container">
@@ -2075,22 +2062,10 @@ $Day5 = strtotime($given . ' +4 day');
     </div>
 
 
-    <footer class="footer">
-      <div class="md-flex md-justify-between">
-        <p class="footerp">HALシネマ</p>
-        <ul class="footer__navi flex">  
-          <li><a href="index.php">TOP</a></li>
-          <li><a href="https://twitter.com/hal_nagoya?ref_src=twsrc%5Etfw">TWITTER</a></li>
-          <li><a href="sisetu.php">ABOUT</a></li>
-        </ul>
-      </div>
-      <hr />
-      <p class="copyright">
-        © 2023 halcinema All Rights Reserved.
-      </p>
+    <footer>
+      <p>2023 © Copyright.</p>
     </footer>
-
-    <script src="js/kounyu.js" type="text/javascript"></script>
+<script src="js/kounyu.js" type="text/javascript"></script>
 
   </body>
 </html>

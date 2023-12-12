@@ -12,26 +12,14 @@ body {
 
 /* Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #333;
   color: #fff;
   padding: 20px;
+  text-align: center;
 }
 
 h1 {
   font-size: 24px;
-  margin: 0;
-  margin-right: 70px;
-}
-
-#sidebar-toggle {
-  font-size: 16px;
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  cursor: pointer;
 }
 
 /* Main Content */
@@ -45,7 +33,6 @@ h1 {
 }
 
 h2 {
-  border-left: solid 10px #AFDFE4;
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -91,33 +78,6 @@ p {
 .screen-info {
   color: #666;
 }
-
-.topga{
-  width: 800px;
-  height: 400px;
-}
-
-/* sisetu.css */
-
-.topjo:hover img {
-background-color: #fff;
-  opacity: 0.7;
-
-  filter: alpha(opacity=70);
-
-  -ms-filter: "alpha(opacity=70)";
-}
-
-/* 追加されたCSS */
-a.topjo:hover {
-  background-color: #fff;
-  opacity: 0.7;
-
-  filter: alpha(opacity=70);
-
-  -ms-filter: "alpha(opacity=70)";
-}
-
 
 /* Footer */
 footer {
@@ -179,6 +139,7 @@ footer p {
 
 
 
+    /* 追加されたCSS */
     .sidebar {
       position: fixed;
       top: 0;
@@ -203,13 +164,12 @@ footer p {
       text-decoration: underline;
     }
 
-.content {
-  margin: 0 auto;
-  max-width: 800px;
-}
+    .content {
+      margin-left: 220px;
+    }
 
 .m{
-  margin: 0 500px 0 auto;
+  margin: 0 1000px 0 auto;
   font-size: 20px;
 }
 
@@ -251,96 +211,3 @@ footer p {
   color: #fff;
   text-decoration: none;
 }
-
-
-
-
-
-
-    .slider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-
-    .slider-item {
-      text-align: center;
-    }
-
-/* スライダーのボタン */
-.slick-prev,
-.slick-next {
-  display: none;
-  font-size: 24px;
-  color: #fff;
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  outline: none;
-  background-color: transparent;
-  border: none;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  font-size: 0;
-  line-height: 0;
-  color: transparent;
-  content: none;
-  display: inline-block;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-}
-
-/* スライダーのボタンテキスト非表示 */
-.slick-prev span,
-.slick-next span {
-  display: none;
-}
-
-
-.slick-prev {
-  left: 20px;
-}
-
-.slick-prev:before {
-  border-right: 10px solid #fff;
-}
-
-.slick-next {
-  right: 20px;
-}
-
-.slick-next:before {
-  border-left: 10px solid #fff;
-}
-
-
-    .slick-dots {
-      position: relative;
-      z-index: 3;
-      text-align: center;
-      margin: -50px 0 0 0;
-    }
-
-    .slick-dots li {
-      display: inline-block;
-      margin: 0 5px;
-    }
-
-    .slick-dots button {
-      color: transparent;
-      outline: none;
-      width: 8px;
-      height: 8px;
-      display: block;
-      border-radius: 50%;
-      background: #fff;
-    }
-
-    .slick-dots .slick-active button {
-      background: #333;
-    }
