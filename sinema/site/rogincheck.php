@@ -22,14 +22,14 @@
   if (empty($name1)) {
         print("NG");
         session_start();
-        $error = "アカウント名又はパスワードが間違っています";
+        $error = "ユーザー名又はパスワードが間違っています";
         $_SESSION['error'] = $error;
         header('Location: login.php');
     } else {
       if (empty($pass1)){
           print("NG");
           session_start();
-          $error = "アカウント名又はパスワードが間違っています";
+          $error = "ユーザー名又はパスワードが間違っています";
           $_SESSION['error'] = $error;
           header('Location: login.php');
       } else {

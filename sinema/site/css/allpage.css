@@ -130,13 +130,14 @@ h1 {
 .sidebar li {
   margin-bottom: 10px;
 }
+
 .container {
   position: relative;
   top: 80px;
   max-width: 800px;
   height: auto;
-  margin: 0px auto;
   min-height: 100vh;
+  margin: 0px auto;
   background-color: #fff;
   padding: 20px;
 }
