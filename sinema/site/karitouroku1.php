@@ -248,39 +248,13 @@ if (isset($_POST['seki'])) {
     unset($_SESSION['movietime']);
     unset($_SESSION['movieday']);
 
+    echo '<script>
+        setTimeout(function() {
+          window.location.href = "index.php";
+        }, 1000); // 3000ミリ秒 = 3秒
+      </script>';
 
   ?>
-  <form action="kanryou.php"
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ii" method="post">
-  <button type="submit">購入</button>
-  <a href="screen1.php">戻る</a>
+  <script>alert("予約が完了しました。")</script>
   
 

@@ -2067,10 +2067,50 @@ $Day5 = strtotime($given . ' +4 day');
           </ul>
         </div>
         <br>
+        
+        <!-- モーダル -->
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div>
+              <div class="ckcon">
+                <h2>予約内容</h2>
+                <p>内容</p>
+                <p>上記の内容で購入します。<br>よろしいですか？</p>
+                <div class="button">
+                  <a href="">戻る</a>
+                  <button type="submit">確定</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       <div class="button-container">
-      <button type="submit">確認画面へ</button>
+        <a id="openModalBtn" type="button">購入</a>
         <a href="jouei.php" class="btn btn-back">戻る</a>
       </div>
+
+
+      <!-- JavaScript -->
+      <script>
+        // モーダルを開くボタンをクリックした時の処理
+        document.getElementById('openModalBtn').addEventListener('click', function() {
+          document.getElementById('myModal').style.display = 'block';
+        });
+
+        // モーダルの閉じるボタンをクリックした時の処理
+        document.querySelector('.close').addEventListener('click', function() {
+          document.getElementById('myModal').style.display = 'none';
+        });
+
+        // モーダルの外側をクリックしたら閉じる処理（オプション）
+        window.addEventListener('click', function(event) {
+          var modal = document.getElementById('myModal');
+          if (event.target === modal) {
+            modal.style.display = 'none';
+          }
+        });
+      </script>
 
     </div>
 
