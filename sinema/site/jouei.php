@@ -1,8 +1,18 @@
-<?php 
+<?php
+//SESSIONのエラー表示削除
+ini_set('display_errors',0);
+
 try{
 
-require('dbpdo.php');
+require('db/dbpdo.php');
 session_start();
+
+if(isset($_SESSION['name'])){
+  $loginuser = $_SESSION['name'];
+}else{
+  $loginuser = "なし";
+}
+
 $day1_p          = $_SESSION['day1_p'];
 $selected_days1  = $_POST['selected_days1'];
 // $day1_p = "";
@@ -12,11 +22,11 @@ $day4_p = $_POST['selected_days4'];
 $day5_p = $_POST['selected_days5'];
 
 
-echo "1日目$day1_p  ";
-echo "2日目$day2_p  ";
-echo "3日目$day3_p  ";
-echo "4日目$day4_p  ";
-echo "5日目$day5_p  ";
+// echo "1日目$day1_p  ";
+// echo "2日目$day2_p  ";
+// echo "3日目$day3_p  ";
+// echo "4日目$day4_p  ";
+// echo "5日目$day5_p  ";
 
 
 
@@ -28,7 +38,7 @@ unset($_SESSION['movieday']);
 // 日付取得
 $given = date('Y-m-d');
 $day1 = date('H/i/s');
-echo "$day1";
+// echo "$day1";
 
 
 
@@ -61,7 +71,7 @@ $week = [
 $date = date('w');
 //日本語で曜日を出力
 $week1 = $week[$date];
-echo date("m/d". $week1 ."") . "\n";
+// echo date("m/d". $week1 ."") . "\n";
 
 
 
@@ -85,10 +95,8 @@ $date = $date + 1;
 //日本語で曜日を出力
 $week2 = $week[$date];
 $Day2 = strtotime($given . ' +1 day');
-echo date("m/d". $week2 ."", $Day2) . "\n";
+// echo date("m/d". $week2 ."", $Day2) . "\n";
 $Day_sql2 = date("m-d", $Day2);
-
-
 
 //3日目表示
 //配列を使用し、要素順に(日:0〜土:6)を設定する
@@ -114,7 +122,7 @@ if($date == 6){
 //日本語で曜日を出力
 $week3 = $week[$date];
 $Day3 = strtotime($given . ' +2 day');
-echo date("m/d". $week3 ."", $Day3) . "\n";
+// echo date("m/d". $week3 ."", $Day3) . "\n";
 $Day_sql3 = date("m-d", $Day3);
 
 
@@ -145,7 +153,7 @@ if($date <= 3){
 //日本語で曜日を出力
 $week4 = $week[$date];
 $Day4 = strtotime($given . ' +3 day');
-echo date("m/d". $week4 ."", $Day4) . "\n";
+// echo date("m/d". $week4 ."", $Day4) . "\n";
 $Day_sql4 = date("m-d", $Day4);
 
 
@@ -179,18 +187,16 @@ if($date <= 2){
 //日本語で曜日を出力
 $week5 = $week[$date];
 $Day5 = strtotime($given . ' +4 day');
-echo date("m/d". $week5 ."", $Day5) . "\n";
+// echo date("m/d". $week5 ."", $Day5) . "\n";
 $Day_sql5 = date("m-d", $Day5);
 
 
 }catch (PDOException $e) {
   exit('データベースに接続できませんでした。' . $e->getMessage());
 }
+
+
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -198,31 +204,39 @@ $Day_sql5 = date("m-d", $Day5);
   <meta charset="UTF-8">
   <title>映画館施設案内</title>
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/allpage.css">
   <link rel="stylesheet" href="css/jouei.css">
 </head>
-
-
-
-<div id="content1" style="display: block;">
 <body>
   <div class="sidebar">
+    <div class="closemenu">
+      <p class="menu">メニュー</p>
+      <button id="sidebar-close-menu">×</button>
+    </div>
     <ul>
       <li><a href="index.php">トップページ</a></li>
       <li><a href="jouei.php">上映スケジュール</a></li>
       <li><a href="sisetu.php">施設情報</a></li>
       <li><a href="ryoukin.php">料金一覧</a></li>
       <li><a href="login.php">ログイン</a></li>
+      <li><a href="user.php">ユーザーページ</a></li>
     </ul>
-<button id="sidebar-close-menu">閉じる</button>
+    <div class="loginuser">
+      <p>ユーザー：</p>
+      <p class="user">
+        <?php
+          echo $loginuser;
+        ?>
+      </p>
+    </div>
   </div>
 
   <div class="content">
     <header>
-      <button id="sidebar-toggle" class="m">メニュー</button>
       <h1>HALシネマ</h1>
+      <button id="sidebar-toggle" class="m"><p>メニュー</p></button>
     </header>
 
-    
     <div class="container">
       <h2 id="facility-info">上映スケジュール</h2>
 
@@ -268,7 +282,7 @@ $Day_sql5 = date("m-d", $Day5);
   $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
   ?>
 <h3>
-  <time><?php echo date("Y/m/d". $week1 ."") . "\n"; ?></time>
+  <time><?php echo date("Y年m月d日". $week1 ."") . "\n"; ?></time>
 </h3>
 
 <?php foreach ($result as $item): ?>
@@ -281,17 +295,12 @@ $Day_sql5 = date("m-d", $Day5);
     $movie_name1 = $movie_name[0][1];
     // print_r($movie_name);
 
-
-
-
-
     ?>
   <?php if($movie_name1 == $item['f_movie_name']) { ?>
     <div class="movie-info">
-        <h4>　<?php echo $item['f_movie_name']; ?>
-          <a href="jouhou.php" class="info-button">映画情報へ</a>　　
-        </h4>
-          </div>
+      <h4><?php echo $item['f_movie_name']; ?></h4>
+      <a href="jouhou.php" class="info-button">映画情報へ</a>
+    </div>
         <ul class="timetable">
           <div>
             <li class="theatre" >
@@ -1287,7 +1296,7 @@ $stmt->execute();
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <h3>
-<time><?php echo date("Y/m/d". $week2 ."", $Day2) . "\n"; ?></time>
+<time><?php echo date("Y年m月d日". $week2 ."", $Day2) . "\n"; ?></time>
 </h3>
 
 <?php foreach ($result as $item): ?>
@@ -1307,10 +1316,9 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
   ?>
 <?php if($movie_name1 == $item['f_movie_name']) { ?>
   <div class="movie-info">
-      <h4>　<?php echo $item['f_movie_name']; ?>
-        <a href="jouhou.php" class="info-button">映画情報へ</a>　　
-      </h4>
-        </div>
+      <h4><?php echo $item['f_movie_name']; ?></h4>
+      <a href="jouhou.php" class="info-button">映画情報へ</a>
+    </div>
       <ul class="timetable">
         <div>
           <li class="theatre" >
@@ -2305,7 +2313,7 @@ $stmt->execute();
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <h3>
-<time><?php echo date("Y/m/d". $week3 ."", $Day3) . "\n"; ?></time>
+<time><?php echo date("Y年m月d日". $week3 ."", $Day3) . "\n"; ?></time>
 </h3>
 
 <?php foreach ($result as $item): ?>
@@ -2325,10 +2333,9 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
   ?>
 <?php if($movie_name1 == $item['f_movie_name']) { ?>
   <div class="movie-info">
-      <h4>　<?php echo $item['f_movie_name']; ?>
-        <a href="jouhou.php" class="info-button">映画情報へ</a>　　
-      </h4>
-        </div>
+      <h4><?php echo $item['f_movie_name']; ?></h4>
+      <a href="jouhou.php" class="info-button">映画情報へ</a>
+    </div>
       <ul class="timetable">
         <div>
           <li class="theatre" >
@@ -3323,7 +3330,7 @@ $stmt->execute();
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <h3>
-<time><?php echo date("Y/m/d". $week4 ."", $Day4) . "\n"; ?></time>
+<time><?php echo date("Y年m月d日". $week4 ."", $Day4) . "\n"; ?></time>
 </h3>
 
 <?php foreach ($result as $item): ?>
@@ -3343,10 +3350,9 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
   ?>
 <?php if($movie_name1 == $item['f_movie_name']) { ?>
   <div class="movie-info">
-      <h4>　<?php echo $item['f_movie_name']; ?>
-        <a href="jouhou.php" class="info-button">映画情報へ</a>　　
-      </h4>
-        </div>
+      <h4><?php echo $item['f_movie_name']; ?></h4>
+      <a href="jouhou.php" class="info-button">映画情報へ</a>
+    </div>
       <ul class="timetable">
         <div>
           <li class="theatre" >
@@ -4341,7 +4347,7 @@ $stmt->execute();
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <h3>
-<time><?php echo date("Y/m/d". $week5 ."", $Day5) . "\n"; ?></time>
+<time><?php echo date("Y年m月d日". $week5 ."", $Day5) . "\n"; ?></time>
 </h3>
 
 <?php foreach ($result as $item): ?>
@@ -4361,10 +4367,9 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
   ?>
 <?php if($movie_name1 == $item['f_movie_name']) { ?>
   <div class="movie-info">
-      <h4>　<?php echo $item['f_movie_name']; ?>
-        <a href="jouhou.php" class="info-button">映画情報へ</a>　　
-      </h4>
-        </div>
+      <h4><?php echo $item['f_movie_name']; ?></h4>
+      <a href="jouhou.php" class="info-button">映画情報へ</a>
+    </div>
       <ul class="timetable">
         <div>
           <li class="theatre" >
@@ -5353,16 +5358,22 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </div>
 
 
-    <footer>
-      <p>2023 © Copyright.</p>
+  <footer class="footer">
+      <div class="md-flex md-justify-between">
+        <p class="footerp">HALシネマ</p>
+        <ul class="footer__navi flex">
+          <li><a href="index.php">TOP</a></li>
+          <li><a href="https://twitter.com/hal_nagoya?ref_src=twsrc%5Etfw">TWITTER</a></li>
+          <li><a href="sisetu.php">ABOUT</a></li>
+        </ul>
+      </div>
+      <hr />
+      <p class="copyright">
+        © 2023 halcinema All Rights Reserved.
+      </p>
     </footer>
+
 <script src="js/sisetu.js" type="text/javascript"></script>
 
   </body>
 </html>
-
-<?php 
-
-
-
-?>

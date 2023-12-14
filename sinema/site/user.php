@@ -45,6 +45,12 @@ if(isset($_SESSION['name'])){
     </div>
   </div>
 
+  <div class="content">
+    <header>
+      <h1>HALシネマ</h1>
+      <button id="sidebar-toggle" class="m"><p>メニュー</p></button>
+    </header>
+
     <div class="container">
     <?php
 
@@ -53,7 +59,7 @@ if(isset($_SESSION['name'])){
       $res->execute();
       $data = $res->fetchAll();
 
-      print("予約番号".$data[0][5]);
+      // print("予約番号".$data[0][5]);
 
       ?>
 
