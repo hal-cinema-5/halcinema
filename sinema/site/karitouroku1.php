@@ -1,13 +1,11 @@
 <?php
 require('db/dbpdo.php');
+
 session_start();
 $name = $_SESSION['name'] ;
 $movie_name = $_SESSION['movieID'];
 $movie_time = $_SESSION['movietime'];
 $movie_day = $_SESSION['movieday'];
-
-
-
 
 $given = date('Y-m-d');
 // $_SESSION['movieID'] = $movie_id;

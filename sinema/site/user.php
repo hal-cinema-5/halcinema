@@ -1,3 +1,17 @@
+<?php
+
+require('db/dbpdo.php');
+
+session_start();
+if(isset($_SESSION['name'])){
+  $loginuser = $_SESSION['name'];
+}else{
+  $loginuser = "なし";
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -39,26 +53,32 @@
 
     <div class="container">
     <?php
-      require('db/dbpdo.php');
-
-      session_start();
-      // $name = $_SESSION['name'] ;
-      // print( $name."さん" );
 
       $sql = (" SELECT * FROM `t_user` WHERE f_user_name = '" . $name . "' "); 
       $res = $dbh->prepare($sql);
       $res->execute();
       $data = $res->fetchAll();
 
-      print("予約番号".$data[0][5]);
-
-      if(isset($_SESSION['name'])){
-        $loginuser = $_SESSION['name'];
-      }else{
-        $loginuser = "なし";
-      }
+      // print("予約番号".$data[0][5]);
 
       ?>
+
+      <div class="usercon">
+        <h2>マイページ</h2>
+        <div class="children">
+          <h3>ユーザー名</h3>
+          <p>ああああ</p>
+          <h3>メールアドレス</h3>
+          <p>ああああ</p>
+          <h3>電話番号</h3>
+          <p>ああああ</p>
+        </div>
+      </div>
+
+      <div class="reservation">
+        <h2>予約中の映画</h2>
+        <p><?php print("予約番号".$data[0][5]); ?></p>
+      </div>
       <a href="cancelcheck.php">cancel</a>
       <a href="components/logout.php">ログアウト</a>
     </div>
